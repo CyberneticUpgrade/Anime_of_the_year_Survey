@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Survey Form</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <!--Structure of Survey code is broke into 9 components
+        Each section has unique ID for CSS
+        -name
+        -email
+        -age
+        -dropdown box
+        -selection section
+        -dropdown box
+        -checkbox
+        -input box
+        -button
+        -->
+        <div class="container">
+            <header class="header">
+            <h1 id="title" class="text-center">Anime of the Year 2022 Entry Form</h1>
+            <p id="description" class="description text-center">
+                It's now that time of the year! Enter submissions for Anime of the Year 2022!
+            </p>
+            </header>
+            <!--this div is for input and label functions with parameters-->
+            <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Enter Your Name" required/>
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">E-Mail</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter Your E-Mail" required/>
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="age">Age</label>
+                <input type="number" id="number" name="age" min="10" max="99" class="form-control" placeholder="Age" required/>
+            </div>
+            <!-- this div is the block for drop menu selection-->
+            <div class="form-group">
+                <p>What is your favorite genre of Anime?</p>
+                <select id="most-like"  name="mostLike"  class="form-control"  required>
+                <option value="shonen">Shonen</option>
+                <option value="shojo">Shojo</option>
+                <option value="seinen">Seinen</option>
+                <option value="josei">Josei</option>
+                <option value="kodomomuke">Kodomomuke</option>
+                <option value="other">Other</option>
+                </select>
+            </div>
+            <!--this div is for multi-choice selection using Radio Inputs-->
+            <div>
+                <p>
+                How likely are you to recommend Anime to a friend?
+                </p>
+                <label>
+                <input name="user-recommend" value="very likely" type="radio" class="input-radio" />Very Likely
+                </label>
+                <label>
+                <input name="user-recommend" value="possibly" type="radio" class="input-radio" />Possibly
+                </label>
+                <label>
+                <input name="user-recommend" value="very unlikely" type="radio" class="input-radio" />Very Unlikely
+                </label>
+            </div>
+            <!--Div repeat of dropdown selection-->
+            <div class="form-group">
+                <p>Select your pick for Anime of the Year 2022</p>
+                <select id="dropdown">
+                <option value="shonen">Jujustu Kaisen</option>
+                <option value="shojo">Kimitsu no Yaiba: Demon Slayer</option>
+                <option value="seinen">Bleach: Thousand Year Blood War</option>
+                <option value="josei">Vinland Saga</option>
+                <option value="kodomomuke">Blue Period</option>
+                <option value="other">Fruits Basket: The Final</option>
+                </select>
+            </div>
+            <!--This div section is code for the checkbox section-->
+            <div>
+                <p>What factors do you consider when selecting an Anime?
+                <span class="clue">(Select all that apply)</span>
+                </p>
+                <label>
+                <input name="prefer" value="animation" type="checkbox" class="input-checkbox" />Animation
+                </label>
+                <label>
+                <input name="prefer" value="ost" type="checkbox" class="input-checkbox" />OST
+                </label>
+                <label>
+                <input name="prefer" value="artwork" type="checkbox" class="input-checkbox" />
+                </label>Artwork
+                <label>
+                <input name="prefer" value="intro-outro" type="checkbox" class="input-checkbox" />
+                </label>Intro/Outro Songs
+                <label>
+                <input name="prefer" value="story" type="checkbox" class="input-checkbox" />Story
+                </label>
+                <label>
+                <input name="prefer" value="voice" type="checkbox" class="input-checkbox" />Voice Actors/Actresses
+                </label>
+                <label>
+                <input name="prefer" value="number-episodes" type="checkbox" class="input-checkbox" />Number of Episodes
+                </label>
+                <label>
+                <input name="prefer" value="studio" type="checkbox" class="input-checkbox" />Production Studio
+                </label>
+                <label>
+                <input name="prefer" value="other" type="checkbox" class="input-checkbox" />Other
+                </label>
+            </div>
+            <div class="form-group">
+                <p>Any comments or additional input</p>
+                <textarea name="comments" id="comments" class="input-textarea" placeholder="Enter comments here..." >
+                </textarea>
+            </div>
+            <!--this block is the button for submition-->
+            <div>
+                <button type="submit" id="submit" class="submit-button" >
+                Submit Entry
+                </button>
+            </div>
+            </form>
+        </div>
+  
+        
+        <script src="" async defer></script>
+    </body>
+</html>
